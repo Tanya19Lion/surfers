@@ -6,6 +6,10 @@ html {
 *::after {
     box-sizing: inherit;
 }
+* {
+	margin: 0;
+	padding: 0;
+}
 a {
     display: inline-block;
     text-decoration: none;
@@ -17,15 +21,9 @@ ul, li {
     list-style: none;
 }
 body {
-    // font-family: 'Playfair Display';
-    // font-family: 'Montserrat';
     font-family: 'Raleway';
     font-size: 14px;
-    // line-height: 24px;
-}
-* {
-	margin: 0;
-	padding: 0;
+    background-color: red;
 }
 html,
 body {
@@ -41,4 +39,9 @@ body {
 }
 .footer {
 	flex: 0 0 auto;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
