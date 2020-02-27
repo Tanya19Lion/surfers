@@ -250,6 +250,7 @@
     background-repeat: no-repeat;
     min-height: 640px;
     position: relative;
+    margin-bottom: 500px;
     &_box {
         max-width: 535px;
         padding: 70px;
@@ -297,4 +298,55 @@
         min-height: 300px;
     }
 }
- 
+//end about
+
+//start slider
+.slider{
+    &_inner {
+        display: flex;
+    }
+    &_item {
+        padding: 25px 50px;
+        max-width: 260px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 10px 17.321px 50px 0px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        width: 100%;
+        &_images {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px;
+        }
+        &_name {
+            font-size: 18px;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            color: $blue;
+            line-height: 24px;
+        }
+        &_email {
+            padding-bottom: 25px;
+            position: relative;
+            color: #8c8c8c;
+            display: block;
+            &::after {
+                position: absolute;
+                content:"";
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-image: url(../images/icons/waves.png);
+                width: 31px;
+                height: 6px;
+            }
+        }
+        &_address {
+            margin-top: 13px;
+            color: #8c8c8c;
+        }
+    }
+}
+

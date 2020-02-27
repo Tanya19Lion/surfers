@@ -25,6 +25,9 @@ $(function(){
         arrows: false,
     });
 
+    $(".slider_wrapper").slick();
+        
+        
     $('.header_box_tab .tab').on('click', function(event) {
         var id = $(this).attr('data-id');
             $('.header_box_tab').find('.tab-item').removeClass('active-tab').hide();
@@ -44,3 +47,8 @@ $(function(){
     });
 
 });
+
+// slidesToShow: 4,
+// slidesToScroll: 1,
+// arrows: true,
+// focusOnSelect: true
