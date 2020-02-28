@@ -4,7 +4,7 @@ $(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: '<button class="prev"></button>',
-        prevArrow: '<button class="next"</button>'
+        prevArrow: '<button class="next"></button>'
     });
 
     $('.header_box_slider_big').slick({
@@ -25,7 +25,15 @@ $(function(){
         arrows: false,
     });
 
-    $(".slider_wrapper").slick();
+    $(".slider_inner").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // centerMode: true,
+        focusOnSelect: true,
+        arrows: true,
+        nextArrow: '<button class="slick-prev"></button>',
+        prevArrow: '<button class="slick-next"></button>'
+    });
         
         
     $('.header_box_tab .tab').on('click', function(event) {
