@@ -433,6 +433,7 @@
 .update_inner {
     padding-left: 150px;
     padding-right: 150px;
+    margin-bottom: 200px;
     text-align: center;
     .update_btn a {
         color: #fff;
@@ -488,5 +489,78 @@
         &:hover {
             color: #0022ff;
         }
+    }
+}
+//end updates
+
+//start follows
+.follows_inner {
+    display: flex;
+    &_box {
+        margin-right: 50px;
+    }
+    .inner_box_images {
+        display: flex;
+        flex-wrap: wrap;
+        & img {
+            width: 320px;
+            height: 320px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+        }
+    }
+    .inner_box_link a {
+        color: #000;
+        font-size: 16px;
+    }
+    .inner_box_link {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        & span {
+            font-size: 24px;
+            font-weight: 700;
+            color: $blue;
+            position: relative;
+            padding-left: 50px;
+            margin-right: 10px;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                background-image: url(../images/icons/instagram_blue.png);
+                left: 0;
+            }
+        }
+    }
+    .inner_social_menu {
+        display: flex;
+        margin-top: 100px;
+        a {
+            color: #000;
+            padding-left: 40px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 31px;
+                height: 6px;
+                background-image: url(../images/icons/wave_blue.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);        
+            }
+        }
+       li {
+           margin-bottom: 20px;
+        }
+       .social_menu_list_left {
+           margin-right: 50px;
+       }
     }
 }
