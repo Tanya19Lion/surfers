@@ -28,7 +28,6 @@ $(function(){
     $(".slider_inner").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        // centerMode: true,
         focusOnSelect: true,
         arrows: true,
         nextArrow: '<button class="slick-prev"></button>',
@@ -40,6 +39,22 @@ $(function(){
         var id = $(this).attr('data-id');
             $('.header_box_tab').find('.tab-item').removeClass('active-tab').hide();
             $('.header_box_tab .tabs').find('.tab').removeClass('active');
+            $(this).addClass('active');
+            $('#'+id).addClass('active-tab').fadeIn();
+            return false;
+    });
+    $('.header_box_tab_next .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+            $('.header_box_tab_next').find('.tab-item').removeClass('active-tab').hide();
+            $('.header_box_tab_next .tabs').find('.tab').removeClass('active');
+            $(this).addClass('active');
+            $('#'+id).addClass('active-tab').fadeIn();
+            return false;
+    });
+    $('.header_box_tab_next_next .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+            $('.header_box_tab_next_next').find('.tab-item').removeClass('active-tab').hide();
+            $('.header_box_tab_next_next .tabs').find('.tab').removeClass('active');
             $(this).addClass('active');
             $('#'+id).addClass('active-tab').fadeIn();
             return false;

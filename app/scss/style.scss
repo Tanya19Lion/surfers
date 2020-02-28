@@ -82,14 +82,15 @@
         max-width: 1030px;
         margin: 0 auto;
         background-color: #fff;
-        background-image: url(../images/header/corner.png);
-        background-position: left top;
-        background-repeat: no-repeat;
+        // background-image: url(../images/header/corner.png);
+        // background-position: left top;
+        // background-repeat: no-repeat;
         min-height: 600px;
         position: relative;
         .tab_content_number {
             position: absolute;
             right: 0;
+            top: 90px;
             color: #fff;
             background-color: #000;
             padding: 8px 18px 8px 8px;   
@@ -119,6 +120,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-repeat: no-repeat;
+            // background-size: cover;
         }
         .small_slider_item {
             width: 70px;
@@ -129,7 +131,9 @@
         }
     }
     
-    .header_box_tab {
+    .header_box_tab, 
+    .header_box_tab_next,
+    .header_box_tab_next_next {
         width: 100%;
         max-width: 400px;
     }
@@ -231,16 +235,16 @@
         cursor: pointer;
     }
     .next {
-        right: -40px;
+        left: 990px;
         top: 50px;
-        background-image: url(../images/icons/arrow_right.png);
+        background-image: url(../images/icons/arrow_left.png);
         background-position: center center;
         background-repeat: no-repeat;
     }
     .prev {
-        left: 990px;
+        right: -40px;
         top: 50px;
-        background-image: url(../images/icons/arrow_left.png);
+        background-image: url(../images/icons/arrow_right.png);
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -255,7 +259,7 @@
     background-repeat: no-repeat;
     min-height: 640px;
     position: relative;
-    margin-bottom: 400px;
+    margin-bottom: 250px;
     &_box {
         max-width: 535px;
         padding: 70px;
@@ -298,7 +302,7 @@
     }
     &_video {
         position: absolute;
-        bottom: -300px;
+        bottom: -190px;
         right: 225px;
         z-index: 2;
         min-height: 300px;
@@ -564,3 +568,73 @@
        }
     }
 }
+//end follows
+
+//start footer
+.footer {
+    background-color: #000;
+    &_inner {
+        display: flex;
+        justify-content: space-around;
+        padding-top:  25px;
+        padding-bottom: 50px;
+        &_copy {
+            color: #fff;
+            // color: #4d4d4d;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        &_subscribe_title {
+            font-family: 'Montserrat';
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        &_subscribe_form {
+            max-width: 300px;
+            position: relative;
+            label {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content:"";
+                    background-image: url(../images/icons/mail_icon.png);
+                    width: 16px;
+                    height: 11px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            input {
+                padding: 8px 8px 8px 25px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid #4d4d4d;
+                color: #fff;
+                width: 100%;
+                outline: transparent;
+            }
+            button {
+                width: 22px;
+                height: 22px;
+                line-height: 22;
+                border-radius: 50%;
+                background-color: $blue;
+                background-image: url(../images/icons/arrow_white.png);
+                border: none;
+                outline: none;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+//end footer
